@@ -1,7 +1,20 @@
-import { Button, Typography } from "@mui/material";
+import { Button, Typography, styled } from "@mui/material";
 import { Settings, Add } from "@mui/icons-material";
 
 function App() {
+  const BlueButton = styled(Button)({
+    backgroundColor: "skyblue",
+    color: "#888",
+    margin: 5,
+    "&:hover": {
+      backgroundColor: "lightblue",
+    },
+    "&:disabled": {
+      backgroundColor: "gray",
+      color: "white"
+    }
+  }) 
+
   return (
     <div className="App">
       <Button variant="text">Text</Button>
@@ -11,18 +24,8 @@ function App() {
       <Typography variant="h1" component="p">
         h1. Heading
       </Typography>
-      <Button variant="contained" disabled sx={{
-        backgroundColor: "skyblue",
-        color: "#888",
-        margin: 5,
-        "&:hover": {
-          backgroundColor: "lightblue",
-        },
-        "&:disabled": {
-          backgroundColor: "gray",
-          color: "white"
-        }
-      }}>My button</Button>
+      <BlueButton>my button</BlueButton>
+      <BlueButton>my button</BlueButton>
     </div>
   );
 }
