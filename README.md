@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+目前工作開發的專案使用到MUI，所以就試著以facebook為參考，用MUI+React做一個simple clone
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
