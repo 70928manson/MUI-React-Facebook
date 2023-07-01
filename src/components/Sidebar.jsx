@@ -19,9 +19,10 @@ import {
   } from "@mui/icons-material";
 import React from 'react';
 
-function Sidebar({ mode, setMode }) {
-    return (
-        <Box bgcolor={'skyblue'} flex={1} p={2} sx={{display: { xs: "none", sm: "block" }}}>
+const Sidebar = ({mode,setMode}) => {
+  return (
+    <Box flex={1} p={2} sx={{ display: { xs: "none", sm: "block" } }}>
+      <Box position="fixed">
         <List>
           <ListItem disablePadding>
             <ListItemButton component="a" href="#home">
@@ -84,12 +85,13 @@ function Sidebar({ mode, setMode }) {
               <ListItemIcon>
                 <ModeNight />
               </ListItemIcon>
-              <Switch onChange={ e => setMode(mode === "light" ? "dark" : "light")}/>
+              <Switch onChange={e=>setMode(mode === "light" ? "dark" : "light")}/>
             </ListItemButton>
           </ListItem>
         </List>
-        </Box>
-    );
-}
+      </Box>
+    </Box>
+  );
+};
 
 export default Sidebar;
